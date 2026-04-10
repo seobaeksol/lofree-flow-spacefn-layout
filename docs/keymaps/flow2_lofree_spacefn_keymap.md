@@ -22,6 +22,7 @@
 - `Fn+1` ~ `Fn+=`: `F1` ~ `F12`
 - `Fn+Q`: `Home`
 - `Fn+E`: `End`
+- `Fn+Backspace`: `Delete`
 - `Fn+W/A/S/D`: `Up / Left / Down / Right`
 - `Fn+H/J/K/L`: `Left / Down / Up / Right`
 - `Fn+N`: Windows 레이어로 전환 (`TO(2)`)
@@ -40,6 +41,7 @@
 ### Layer 1 Mac SpaceFn
 
 - 숫자열: `F1` ~ `F12`
+- `Backspace`: `Delete`
 - 이동 계열:
   - `Q/E`: `Home / End`
   - `W/A/S/D`: `Up / Left / Down / Right`
@@ -58,6 +60,7 @@
 ### Layer 3 Windows SpaceFn
 
 - `Layer 1`과 동일한 기능
+- `Backspace`: `Delete`
 - 우측 modifier 쪽만 Windows 배치 유지
 
 ### Layer 4 Special
