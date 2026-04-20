@@ -1,55 +1,130 @@
-# Lofree Flow / Flow2 SpaceFn Layout
+# Lofree Flow / Flow2 SpaceFn
 
-Custom VIA layouts for the Lofree Flow / Flow2 keyboard, built around a SpaceFn workflow for development-heavy use.
+Custom layouts, patched vendor firmware, and tooling for the **Lofree Flow 2 68-key (`OE928`)**.
 
 Korean README: [README.ko.md](README.ko.md)
 
-## Why I made this
+## Start Here
 
-As a developer, I kept tuning my keyboard layout around the things I use constantly while writing code:
+If you want the simplest path, flash the ready-made firmware in [firmware/patched/oe928_v14_spacefn.hex](firmware/patched/oe928_v14_spacefn.hex).
 
-- arrow movement
-- `Home` / `End`
-- `Page Up` / `Page Down`
-- function keys
-- fast macOS / Windows switching
+This is the recommended path because it keeps the Flow 2 wireless switching keys working without relying on VIA `Save + Load`.
 
-So I ended up building a custom VIA layout for the Lofree Flow / Flow2 with one main idea:
+## What You Get
+
+This firmware gives you a SpaceFn-based keymap with the vendor wireless switching keys preserved.
+
+- tap `Space`: normal space
+- hold `Space`: temporary Fn layer
+- `Fn + W A S D`: arrows
+- `Fn + H J K L`: arrows
+- `Fn + Q / E`: `Home / End`
+- `Fn + 1..=`: `F1..F12`
+- physical arrow cluster: `Home / Page Down / Page Up / End`
+- BT1 / BT2 / BT3 / 2.4G switching kept on the special layer
+
+See [docs/keymaps/flow2_lofree_spacefn_keymap.md](docs/keymaps/flow2_lofree_spacefn_keymap.md) for the full layer map.
+
+## What You Need
+
+- a **Lofree Flow 2 68-key (`OE928`)**
+- a USB cable
+- [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) for flashing
+- optional: [VIA](https://usevia.app/) for inspecting or adjusting the layout after flashing
+- this firmware file: [firmware/patched/oe928_v14_spacefn.hex](firmware/patched/oe928_v14_spacefn.hex)
+
+Helpful references:
+
+- [QMK flashing guide](https://docs.qmk.fm/newbs_flashing)
+- [QMK bootloader / flashing docs](https://docs.qmk.fm/flashing)
+- vendor flashing video in this repo: [references/flow2_upgrade_instructions.mp4](references/flow2_upgrade_instructions.mp4)
+
+## Flash the Firmware
+
+1. Install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases).
+2. Open QMK Toolbox and load [firmware/patched/oe928_v14_spacefn.hex](firmware/patched/oe928_v14_spacefn.hex).
+3. Put the keyboard into DFU mode. If you are unsure how, watch [references/flow2_upgrade_instructions.mp4](references/flow2_upgrade_instructions.mp4).
+4. Click `Flash` in QMK Toolbox and wait for it to finish.
+5. Reboot the keyboard, then clear EEPROM so the new embedded default layout is used.
+6. Test `SpaceFn`, the arrow layers, and the BT1 / BT2 / BT3 / 2.4G switching keys.
+
+Full walkthrough: [docs/guides/flash_patched_firmware.md](docs/guides/flash_patched_firmware.md)
+
+## Roll Back to Vendor Firmware
+
+If you want to undo the SpaceFn firmware, flash [references/oe928_v14_vendor.hex](references/oe928_v14_vendor.hex) with the same QMK Toolbox workflow.
+
+## If You Want to Stay on Vendor Firmware
+
+You can still use VIA only:
+
+- load [layouts/spacefn/flow2_lofree_spacefn.layout.json](layouts/spacefn/flow2_lofree_spacefn.layout.json)
+- read the caveats in [docs/guides/via_layouts.md](docs/guides/via_layouts.md)
+
+This is less reliable than the patched firmware because Flow 2 wireless switching keys can become `KC_NO` after a VIA `Save + Load` round-trip.
+
+## What This Repo Provides
+
+- a working **SpaceFn** layout for the Flow 2 68-key
+- the original VIA layout backup used in this repo
+- a patched vendor firmware image that preserves the working BT/2.4G switching keys
+- a small tool to extract or patch the embedded default keymap inside the vendor firmware
+- documentation for the VIA limitation that turns some Flow 2 wireless-switching keys into `KC_NO`
+
+## Why SpaceFn
+
+The layout is built around one idea:
 
 - tap `Space`: normal space
 - hold `Space`: temporary Fn layer
 
-The goal was simple: reduce hand movement without turning the layout into something awkward to daily-drive.
+The SpaceFn layers provide:
 
-## Main ideas
-
-- `Fn + W A S D`: arrow keys
-- `Fn + H J K L`: arrow keys
+- `Fn + W A S D`: arrows
+- `Fn + H J K L`: arrows
 - `Fn + Q / E`: `Home / End`
-- physical arrow cluster: `Home / Page Down / Page Up / End`
 - `Fn + 1..=`: `F1..F12`
-- `Fn + M / N`: macOS / Windows layer switching
-- dedicated hardware `Fn` key: special layer access
-- wireless switching, media, volume, brightness, backlight, search, multi-screen, and ambient light controls are grouped into a separate special layer
+- physical arrow cluster: `Home / Page Down / Page Up / End`
+- a dedicated special layer for wireless switching, media, volume, brightness, backlight, search, and ambient light
 
-## Repository structure
+## Repository Map
 
-- `layouts/original/flow2_lofree.layout.json`
-  - original layout backup
-- `layouts/spacefn/flow2_lofree_spacefn.layout.json`
-  - current custom layout
-- `docs/keymaps/`
-  - detailed layer notes and mapping docs
-- `references/lofree_flow2_manual.pdf`
-  - manual used to identify vendor-specific keycodes
+- [layouts/original/flow2_lofree.layout.json](layouts/original/flow2_lofree.layout.json): repo backup of the original VIA layout
+- [layouts/spacefn/flow2_lofree_spacefn.layout.json](layouts/spacefn/flow2_lofree_spacefn.layout.json): main SpaceFn VIA layout
+- [layouts/README.md](layouts/README.md): notes about layout sources and caveats
+- [firmware/patched/oe928_v14_spacefn.hex](firmware/patched/oe928_v14_spacefn.hex): ready-to-flash patched vendor firmware
+- [firmware/extracted/oe928_v14_factory.layout.json](firmware/extracted/oe928_v14_factory.layout.json): default layout extracted from the vendor `v14` firmware
+- [tools/oe928_firmware_tool.py](tools/oe928_firmware_tool.py): firmware extract/patch tool
+- [docs/README.md](docs/README.md): documentation index
+- [references/README.md](references/README.md): vendor files and reverse-engineering references
 
-## Notes
+## Important Notes
 
-- This repo is intentionally lightweight. The detailed explanation lives in `docs/keymaps/`.
-- Additional suggestions are always welcome.
-- If you know the meaning of any still-unidentified custom keycodes, I would appreciate it if you let me know.
+- The Flow 2 68-key uses vendor-specific handling for some wireless-switching keys.
+- VIA layout JSON alone is not always enough to preserve those keys.
+- [layouts/original/flow2_lofree.layout.json](layouts/original/flow2_lofree.layout.json) is a useful repo backup, but it is not a byte-for-byte dump of the embedded default layout from vendor firmware `v14`.
 
-## Status
+## Tooling
 
-- The layout is already usable and feels better than I expected in real work.
-- It is still evolving, especially around vendor-specific custom keys and small ergonomic refinements.
+The included tool supports:
+
+- dump the embedded default keymap
+- decode that keymap into VIA/QMK-style tokens
+- extract it to a VIA layout JSON
+- patch a VIA layout JSON back into the vendor firmware image
+
+Common commands:
+
+```bash
+make dump
+make extract
+make patch
+```
+
+## Documentation
+
+- [docs/README.md](docs/README.md)
+- [docs/guides/flash_patched_firmware.md](docs/guides/flash_patched_firmware.md)
+- [docs/guides/via_layouts.md](docs/guides/via_layouts.md)
+- [docs/firmware/flow2_firmware_notes.md](docs/firmware/flow2_firmware_notes.md)
+- [docs/keymaps/flow2_lofree_spacefn_keymap.md](docs/keymaps/flow2_lofree_spacefn_keymap.md)
