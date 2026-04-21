@@ -288,13 +288,6 @@ def render_layer_svg(keys, layers, meta):
     accent = meta["accent"]
     board_w = CANVAS_W - 2 * 24
     board_h = CANVAS_H - 2 * 26
-    subtitle = {
-        0: "macOS default layer with SpaceFn on Space",
-        1: "macOS navigation and function layer",
-        2: "Windows default layer with SpaceFn on Space",
-        3: "Windows navigation and function layer",
-        4: "wireless, media, brightness, and device controls",
-    }[meta["index"]]
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{CANVAS_W}" height="{CANVAS_H}" viewBox="0 0 {CANVAS_W} {CANVAS_H}">',
         "<defs>",
@@ -312,14 +305,11 @@ def render_layer_svg(keys, layers, meta):
         "</defs>",
         f'<rect width="{CANVAS_W}" height="{CANVAS_H}" fill="url(#bg)"/>',
         f'<rect x="24" y="26" width="{board_w}" height="{board_h}" rx="34" fill="url(#case)" filter="url(#shadow)"/>',
-        f'<rect x="62" y="52" width="76" height="20" rx="8" fill="#2c3236" opacity="0.78"/>',
         f'<rect x="{CANVAS_W - 148}" y="52" width="78" height="20" rx="8" fill="#2c3236" opacity="0.78"/>',
         f'<text x="62" y="46" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="15" '
         f'font-weight="700" letter-spacing="1.5" fill="#6d7982">{html.escape(meta["name"].upper())}</text>',
         f'<text x="62" y="74" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="28" '
         f'font-weight="700" fill="#202a31">{html.escape(meta["title"])}</text>',
-        f'<text x="62" y="98" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="15" '
-        f'font-weight="500" fill="#5f6a73">{html.escape(subtitle)}</text>',
     ]
 
     for key in keys:
@@ -336,18 +326,7 @@ def render_layer_svg(keys, layers, meta):
         )
         svg.extend([key_shadow, key_rect, text_block(key["x"], key["y"], key["w"], key["h"], label, style["text"])])
 
-    svg.extend(
-        [
-            f'<rect x="{CANVAS_W - 338}" y="72" width="248" height="34" rx="17" fill="#ffffff" opacity="0.82"/>',
-            f'<circle cx="{CANVAS_W - 315}" cy="89" r="6" fill="{accent}"/>',
-            f'<text x="{CANVAS_W - 299}" y="94" font-family="Inter, SF Pro Display, Arial, sans-serif" '
-            'font-size="14" font-weight="600" fill="#33424c">Assigned key</text>',
-            f'<circle cx="{CANVAS_W - 198}" cy="89" r="6" fill="#d8dde2"/>',
-            f'<text x="{CANVAS_W - 182}" y="94" font-family="Inter, SF Pro Display, Arial, sans-serif" '
-            'font-size="14" font-weight="600" fill="#67737d">TRNS / NO</text>',
-            "</svg>",
-        ]
-    )
+    svg.append("</svg>")
     return "\n".join(svg)
 
 

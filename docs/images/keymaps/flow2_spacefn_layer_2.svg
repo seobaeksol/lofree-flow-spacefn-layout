@@ -14,11 +14,9 @@
 </defs>
 <rect width="1560" height="560" fill="url(#bg)"/>
 <rect x="24" y="26" width="1512" height="508" rx="34" fill="url(#case)" filter="url(#shadow)"/>
-<rect x="62" y="52" width="76" height="20" rx="8" fill="#2c3236" opacity="0.78"/>
 <rect x="1412" y="52" width="78" height="20" rx="8" fill="#2c3236" opacity="0.78"/>
 <text x="62" y="46" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5" fill="#6d7982">LAYER 2</text>
 <text x="62" y="74" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="28" font-weight="700" fill="#202a31">Windows Base</text>
-<text x="62" y="98" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="15" font-weight="500" fill="#5f6a73">Windows default layer with SpaceFn on Space</text>
 <rect x="42.0" y="92.0" width="78.0" height="72.0" rx="14" fill="#aeb6bd" opacity="0.18"/>
 <rect x="42.0" y="88.0" width="78.0" height="72.0" rx="14" fill="#ffffff" stroke="#d5dbe0" stroke-width="2"/>
 <text x="81.0" y="129.5" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="21" font-weight="600" text-anchor="middle" fill="#26343d">~</text>
@@ -223,9 +221,4 @@
 <rect x="1332.0" y="436.0" width="78.0" height="72.0" rx="14" fill="#aeb6bd" opacity="0.18"/>
 <rect x="1332.0" y="432.0" width="78.0" height="72.0" rx="14" fill="#ffffff" stroke="#d5dbe0" stroke-width="2"/>
 <text x="1371.0" y="473.5" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="21" font-weight="600" text-anchor="middle" fill="#26343d">Right</text>
-<rect x="1222" y="72" width="248" height="34" rx="17" fill="#ffffff" opacity="0.82"/>
-<circle cx="1245" cy="89" r="6" fill="#8a6a3e"/>
-<text x="1261" y="94" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="14" font-weight="600" fill="#33424c">Assigned key</text>
-<circle cx="1362" cy="89" r="6" fill="#d8dde2"/>
-<text x="1378" y="94" font-family="Inter, SF Pro Display, Arial, sans-serif" font-size="14" font-weight="600" fill="#67737d">TRNS / NO</text>
 </svg>
