@@ -25,8 +25,6 @@
 - `Fn+Backspace`: `Delete`
 - `Fn+W/A/S/D`: `Up / Left / Down / Right`
 - `Fn+H/J/K/L`: `Left / Down / Up / Right`
-- `Fn+N`: Windows 레이어로 전환 (`TO(2)`)
-- `Fn+M`: Mac 레이어로 전환 (`TO(0)`)
 - 물리 화살표 4개: `Home / Page Down / Page Up / End`
 
 ## 레이어별 역할
@@ -46,9 +44,6 @@
   - `Q/E`: `Home / End`
   - `W/A/S/D`: `Up / Left / Down / Right`
   - `H/J/K/L`: `Left / Down / Up / Right`
-- 시스템 전환:
-  - `N`: Windows
-  - `M`: Mac
 
 ### Layer 2 Windows Base
 
@@ -77,6 +72,7 @@
 - `Space`: 터치 기능 On/Off (`CUSTOM(13)`)
 - `Left Arrow / Right Arrow`: 앰비언트 라이트 이전/다음 (`CUSTOM(10)`, `CUSTOM(14)`)
 - `B`: NKRO 토글
+- `N/M`: Windows / Mac 레이어 전환
 - `Home / End`: `Page Up / Page Down`
 - `Delete`: 잠금 추정 기능 (`CUSTOM(8)`)
 - `Left Shift`: `Layer 5 hold`

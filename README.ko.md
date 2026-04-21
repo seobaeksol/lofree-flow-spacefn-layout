@@ -20,6 +20,7 @@ English README: [README.md](README.md)
 - `Fn + H J K L`: 방향키
 - `Fn + Q / E`: `Home / End`
 - `Fn + 1..=`: `F1..F12`
+- `Layer 4 + N / M`: Windows / Mac 전환
 - 물리 방향키 4개: `Home / Page Down / Page Up / End`
 - 특수 레이어에 BT1 / BT2 / BT3 / 2.4G 전환 유지
 
@@ -78,8 +79,9 @@ English README: [README.md](README.md)
 2. QMK Toolbox를 열고 [firmware/patched/oe928_v14_spacefn.hex](firmware/patched/oe928_v14_spacefn.hex)를 불러옵니다.
 3. 키보드를 DFU 모드로 진입시킵니다. 방법을 모르겠으면 [references/flow2_upgrade_instructions.mp4](references/flow2_upgrade_instructions.mp4)를 참고합니다.
 4. QMK Toolbox에서 `Flash`를 누르고 완료될 때까지 기다립니다.
-5. 키보드가 다시 올라오면 EEPROM을 초기화해서 새 기본 레이아웃이 적용되게 합니다.
-6. `SpaceFn`, 방향키 레이어, BT1 / BT2 / BT3 / 2.4G 전환이 정상 동작하는지 확인합니다.
+5. 키보드를 다시 올립니다.
+6. `SpaceFn`, 방향키 레이어, `Layer 4 + N / M`, BT1 / BT2 / BT3 / 2.4G 전환이 정상 동작하는지 확인합니다.
+7. `[Optional, but often necessary]` 키보드가 이전 레이아웃처럼 동작하거나 새 기본 키맵을 반영하지 않으면 EEPROM을 초기화합니다.
 
 전체 절차는 [docs/guides/flash_patched_firmware.md](docs/guides/flash_patched_firmware.md)에 더 자세히 정리되어 있습니다.
 

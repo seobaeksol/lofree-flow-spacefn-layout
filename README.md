@@ -20,6 +20,7 @@ This firmware gives you a SpaceFn-based keymap with the vendor wireless switchin
 - `Fn + H J K L`: arrows
 - `Fn + Q / E`: `Home / End`
 - `Fn + 1..=`: `F1..F12`
+- `Layer 4 + N / M`: Windows / Mac switching
 - physical arrow cluster: `Home / Page Down / Page Up / End`
 - BT1 / BT2 / BT3 / 2.4G switching kept on the special layer
 
@@ -78,8 +79,9 @@ Helpful references:
 2. Open QMK Toolbox and load [firmware/patched/oe928_v14_spacefn.hex](firmware/patched/oe928_v14_spacefn.hex).
 3. Put the keyboard into DFU mode. If you are unsure how, watch [references/flow2_upgrade_instructions.mp4](references/flow2_upgrade_instructions.mp4).
 4. Click `Flash` in QMK Toolbox and wait for it to finish.
-5. Reboot the keyboard, then clear EEPROM so the new embedded default layout is used.
-6. Test `SpaceFn`, the arrow layers, and the BT1 / BT2 / BT3 / 2.4G switching keys.
+5. Reboot the keyboard.
+6. Test `SpaceFn`, the arrow layers, `Layer 4 + N / M`, and the BT1 / BT2 / BT3 / 2.4G switching keys.
+7. `[Optional, but often necessary]` Clear EEPROM if the keyboard still behaves like the old layout or does not pick up the new embedded default keymap.
 
 Full walkthrough: [docs/guides/flash_patched_firmware.md](docs/guides/flash_patched_firmware.md)
 
