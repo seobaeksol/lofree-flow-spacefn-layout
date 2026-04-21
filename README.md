@@ -25,6 +25,39 @@ This firmware gives you a SpaceFn-based keymap with the vendor wireless switchin
 
 See [docs/keymaps/flow2_lofree_spacefn_keymap.md](docs/keymaps/flow2_lofree_spacefn_keymap.md) for the full layer map.
 
+## Layer Gallery
+
+Quick visual reference for the five main layers. Full page version: [docs/keymaps/flow2_lofree_spacefn_layers.md](docs/keymaps/flow2_lofree_spacefn_layers.md)
+
+<table>
+  <tr>
+    <td width="50%">
+      <strong>Layer 0 · Mac Base</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_0.png" alt="Layer 0 Mac Base">
+    </td>
+    <td width="50%">
+      <strong>Layer 1 · Mac SpaceFn</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_1.png" alt="Layer 1 Mac SpaceFn">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <strong>Layer 2 · Windows Base</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_2.png" alt="Layer 2 Windows Base">
+    </td>
+    <td width="50%">
+      <strong>Layer 3 · Windows SpaceFn</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_3.png" alt="Layer 3 Windows SpaceFn">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Layer 4 · Special</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_4.png" alt="Layer 4 Special">
+    </td>
+  </tr>
+</table>
+
 ## What You Need
 
 - a **Lofree Flow 2 68-key (`OE928`)**

@@ -25,6 +25,39 @@ English README: [README.md](README.md)
 
 전체 레이어 설명은 [docs/keymaps/flow2_lofree_spacefn_keymap.md](docs/keymaps/flow2_lofree_spacefn_keymap.md)를 보면 됩니다.
 
+## 레이어 이미지
+
+주요 5개 레이어를 바로 볼 수 있는 미리보기입니다. 전체 페이지 버전은 [docs/keymaps/flow2_lofree_spacefn_layers.md](docs/keymaps/flow2_lofree_spacefn_layers.md)에 있습니다.
+
+<table>
+  <tr>
+    <td width="50%">
+      <strong>Layer 0 · Mac Base</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_0.png" alt="Layer 0 Mac Base">
+    </td>
+    <td width="50%">
+      <strong>Layer 1 · Mac SpaceFn</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_1.png" alt="Layer 1 Mac SpaceFn">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <strong>Layer 2 · Windows Base</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_2.png" alt="Layer 2 Windows Base">
+    </td>
+    <td width="50%">
+      <strong>Layer 3 · Windows SpaceFn</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_3.png" alt="Layer 3 Windows SpaceFn">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Layer 4 · Special</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_4.png" alt="Layer 4 Special">
+    </td>
+  </tr>
+</table>
+
 ## 필요한 것
 
 - **Lofree Flow 2 68키 (`OE928`)**

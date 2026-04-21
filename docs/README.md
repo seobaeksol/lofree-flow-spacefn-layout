@@ -15,6 +15,7 @@
 
 - [firmware/flow2_firmware_notes.md](firmware/flow2_firmware_notes.md): reverse-engineering notes
 - [keymaps/flow2_lofree_spacefn_keymap.md](keymaps/flow2_lofree_spacefn_keymap.md): SpaceFn layer map
+- [keymaps/flow2_lofree_spacefn_layers.md](keymaps/flow2_lofree_spacefn_layers.md): visual layer sheets
 - [keymaps/flow2_lofree_keymap.md](keymaps/flow2_lofree_keymap.md): repo backup of the original layout
 
 ## Artifacts
