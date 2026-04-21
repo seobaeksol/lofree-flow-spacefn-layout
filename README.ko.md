@@ -28,7 +28,7 @@ English README: [README.md](README.md)
 
 ## 레이어 이미지
 
-주요 5개 레이어를 바로 볼 수 있는 미리보기입니다. 전체 페이지 버전은 [docs/keymaps/flow2_lofree_spacefn_layers.md](docs/keymaps/flow2_lofree_spacefn_layers.md)에 있습니다.
+전체 6개 레이어를 바로 볼 수 있는 미리보기입니다. 전체 페이지 버전은 [docs/keymaps/flow2_lofree_spacefn_layers.md](docs/keymaps/flow2_lofree_spacefn_layers.md)에 있습니다.
 
 <table>
   <tr>
@@ -52,9 +52,13 @@ English README: [README.md](README.md)
     </td>
   </tr>
   <tr>
-    <td colspan="2">
+    <td width="50%">
       <strong>Layer 4 · Special</strong><br>
       <img src="docs/images/png/flow2_spacefn_layer_4.png" alt="Layer 4 Special">
+    </td>
+    <td width="50%">
+      <strong>Layer 5 · Deep Special</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_5.png" alt="Layer 5 Deep Special">
     </td>
   </tr>
 </table>

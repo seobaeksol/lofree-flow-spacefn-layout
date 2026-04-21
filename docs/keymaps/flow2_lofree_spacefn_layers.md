@@ -1,6 +1,6 @@
 # Flow 2 SpaceFn Layer Images
 
-Generated visuals for the main five layers used by the SpaceFn layout.
+Generated visuals for all six layers used by the SpaceFn layout.
 
 ## Layer 0
 
@@ -21,3 +21,7 @@ Generated visuals for the main five layers used by the SpaceFn layout.
 ## Layer 4
 
 ![Layer 4](../images/keymaps/flow2_spacefn_layer_4.svg)
+
+## Layer 5
+
+![Layer 5](../images/keymaps/flow2_spacefn_layer_5.svg)

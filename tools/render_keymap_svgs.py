@@ -28,6 +28,7 @@ LAYER_META = [
     {"index": 2, "name": "Layer 2", "title": "Windows Base", "accent": "#8a6a3e"},
     {"index": 3, "name": "Layer 3", "title": "Windows SpaceFn", "accent": "#c45a2c"},
     {"index": 4, "name": "Layer 4", "title": "Special", "accent": "#6d7b86"},
+    {"index": 5, "name": "Layer 5", "title": "Deep Special", "accent": "#8c6277"},
 ]
 
 MAC_GUI_LABELS = {

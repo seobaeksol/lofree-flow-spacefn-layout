@@ -28,7 +28,7 @@ See [docs/keymaps/flow2_lofree_spacefn_keymap.md](docs/keymaps/flow2_lofree_spac
 
 ## Layer Gallery
 
-Quick visual reference for the five main layers. Full page version: [docs/keymaps/flow2_lofree_spacefn_layers.md](docs/keymaps/flow2_lofree_spacefn_layers.md)
+Quick visual reference for all six layers. Full page version: [docs/keymaps/flow2_lofree_spacefn_layers.md](docs/keymaps/flow2_lofree_spacefn_layers.md)
 
 <table>
   <tr>
@@ -52,9 +52,13 @@ Quick visual reference for the five main layers. Full page version: [docs/keymap
     </td>
   </tr>
   <tr>
-    <td colspan="2">
+    <td width="50%">
       <strong>Layer 4 · Special</strong><br>
       <img src="docs/images/png/flow2_spacefn_layer_4.png" alt="Layer 4 Special">
+    </td>
+    <td width="50%">
+      <strong>Layer 5 · Deep Special</strong><br>
+      <img src="docs/images/png/flow2_spacefn_layer_5.png" alt="Layer 5 Deep Special">
     </td>
   </tr>
 </table>
